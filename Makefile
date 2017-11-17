@@ -1,12 +1,19 @@
-init:
+define link
+ln -fs `pwd`/vimrc ~/.vimrc
+ln -fs `pwd`/zshrc ~/.zshrc
+ln -fs `pwd`/flake8	~/.flake8
+ln -fs `pwd`/gitignore_global	~/.gitignore_global
+ln -fs `pwd`/ideavimrc ~/.ideavimrc
+endef
 
-		ln -fs `pwd`/vimrc										~/.vimrc
-		ln -fs `pwd`/zshrc    								~/.zshrc
-		ln -fs `pwd`/CFUserTextEncoding 			~/.CFUserTextEncoding
-		ln -fs `pwd`/flake8						    		~/.flake8
-		ln -fs `pwd`/gitignore_global    			~/.gitignore_global
-		ln -fs `pwd`/ideavimrc    						~/.ideavimrc
+init:
+		$(link)
 
 sync:
-    git pull
-    git push
+		git pull
+		$(link)
+
+upload:
+		git add .
+		git commit -m "auto upload"
+		git push
