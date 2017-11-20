@@ -75,11 +75,11 @@ export PGDATA="/Users/vici/Library/Application Support/Postgres/var-9.6"
 [ -f /Users/vici/.travis/travis.sh ] && source /Users/vici/.travis/travis.sh
 
 # dotfile script
-function dot_synca {
-  cd ~/myproject/dotfiles && make sync
+function dot_sync {
+  eval "cd ~/myproject/dotfiles && make sync"
 }
 
 function dot_upload {
-  cd ~/myproject/dotfiles && make upload
+  eval "cd ~/myproject/dotfiles && make upload"
 }
 
