@@ -18,6 +18,13 @@ upload:
 		git commit -m "auto upload"
 		git push
 
-install-tools:
-	chmod +x ./install-in-new-os.sh
-	sh ./install-in-new-os.sh
+centos-init:
+		chmod +x ./install-in-centos.sh
+		sh ./install-in-centos.sh
+
+rollback:
+
+		git reset --hard origin/master
+		git checkout -- .
+		git fetch --all
+		git checkout origin/centos-7-version
