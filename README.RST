@@ -3,6 +3,7 @@
 =======
 
 Dear vici, 如果你又换电脑了：
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. ``git clone``
 
@@ -10,6 +11,22 @@ Dear vici, 如果你又换电脑了：
 n. ``make init``
 
 Done.
+
+如果你又双叒叕折腾了一个centos7服务器
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+想办法root.
+
+请依次进行一下操作:
+
+1. 全平台通用用户名
+::
+
+   adduser vici
+   passwd vici
+   usermod -aG wheel vici
+   visudo   # and add a new line '%wheel  ALL=(ALL)       ALL' to the  end of the file
+
+
 
 License
 -------
