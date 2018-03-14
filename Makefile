@@ -18,6 +18,3 @@ upload:
 		git commit -m "auto upload"
 		git push
 
-install-tools:
-	chmod +x ./install-in-new-os.sh
-	sh ./install-in-new-os.sh
