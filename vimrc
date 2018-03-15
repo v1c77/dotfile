@@ -39,6 +39,8 @@ Plug 'Raimondi/delimitMate'     " 自动补全单引号，双引号等
 Plug 'scrooloose/nerdcommenter' " 快速注释
 Plug 'bronson/vim-trailing-whitespace' " 快速去行尾空格 [, + <Space>]
 Plug 'unblevable/quick-scope'   " 更高效的行内移动, f/F/t/T, 才触发
+Plug 'scrooloose/nerdtree'      " 目录树
+
 
 call plug#end()
 
@@ -194,6 +196,17 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
+" 系统剪切板
+map <C-c> "+y
+" map <C-v> "+p mac 存在按键冲突。 放弃。
+
+
+" normal 模式 0到行首， 9到行尾
+noremap 0 ^
+
+
+noremap 9 $
+
 "Treat long lines as break lines (useful when moving around in them)
 "se swap之后，同物理行上线直接跳
 nnoremap k gk
@@ -240,8 +253,25 @@ vnoremap > >gr
 " y$ -> Y Make Y behave like other capitals
 map Y y$
 
-" 复制选中区到系统剪切板中
-vnoremap <leader>y "+y
-
 " w!! to sudo & write a file
 cmap w!! w !sudo tee >/dev/null %
+
+" =====nerdtree 目录树设置=======
+"vim启动的时候打开nerdtree
+"autocmd vimenter * NERDTree
+"打开一个未指明的文件时也打开nerdtree
+"autocmd vimenter * if !argc() | NERDTree | endif
+"最后只剩下nerdtree的时候关闭之
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"nerdtree 的宽度
+let NERDTreeWinSize = 35
+"显示行号
+let NERDTreeShowLineNumbers=1
+let NERDTreeIgnore=['\.pyc$', '\.o$', '\~$', '__pycache__']
+
+" ============自定义命令==============
+" 打开/关闭Nerdtree
+:command NT :NERDTreeToggle
+"清楚行尾空白
+:command WS :%s/\s\+$//e
+
