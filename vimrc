@@ -198,7 +198,7 @@ map <Down> <Nop>
 
 " 系统剪切板
 map <C-c> "+y
-map <C-v> "+p
+" map <C-v> "+p
 
 " normal 模式 0到行首， 9到行尾
 noremap 0 ^

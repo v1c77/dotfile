@@ -59,20 +59,31 @@ git checkout origin/centos-7-version
 
 # install zsh & oh-my-zsh
 
-if pushd ${home_dir}; then
-    sudo -S yum install -y zsh
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" || echo 'install omz complete'
-    chsh -s /bin/zsh
+# if pushd ${home_dir}; then
+#     sudo -S yum install -y zsh
+#     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" || echo 'install omz complete'
+#     chsh -s /bin/zsh
+#     popd
+# fi
+
+# insstall golang
+if pushd ${work_dir}; then
+    curl -LO https://dl.google.com/go/go1.10.linux-amd64.tar.gz
+    sudo -S tar -C /usr/local -xvzf go1.10.linux-amd64.tar.gz
+    mkdir -p ~/go_home/{bin,pkg,src}
+    echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/path.sh
+    echo 'export GOBIN="$HOME/go_home/bin"' | tee ~/.zshrc
+    echo 'export GOPATH="$HOME/go_home/src"' | tee ~/.zshrc
+    source /etc/profile && source ~/.zshrc
     popd
-fi
 
 # install hub
-#if pushd ${work_dir}; then
-#    git clone https://github.com/github/hub.git
-#    cd hub
-#    make install prefix=/usr/local
-#    popd
-#fi
+if pushd ${work_dir}; then
+    git clone https://github.com/github/hub.git
+    cd hub
+    make install prefix=/usr/local
+    popd
+fi
 
 
 # finish
