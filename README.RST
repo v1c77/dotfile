@@ -26,6 +26,16 @@ Done.
    usermod -aG wheel vici
    visudo   # and add a new line '%wheel  ALL=(ALL)       ALL' to the  end of the file
 
+2. 换个好听的hostname
+::
+
+    一顿操作
+
+3. 剩下的交给脚本
+::
+
+    make centos-init
+
 
 
 License
