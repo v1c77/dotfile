@@ -6,7 +6,7 @@ ZSH_THEME="gnzh"
 autoload -U compinit
 compinit
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-plugins=(git docker docker-compose celery pyenv pip mvn)
+plugins=(git docker docker-compose celery pyenv pip mvn zsh-syntax-highlighting nvm gvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -30,7 +30,7 @@ alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 alias -s tar='tar -zxvf'
 alias ins='sudo apt -y install'
-alias wp='cd ~/myproject/elem/carbon'
+alias wp='cd ~/myproject/smartx'
 alias subl='open -a "Sublime Text"'
 alias pc='proxychains4'
 alias git='hub'
@@ -90,3 +90,15 @@ export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL=
+
+# openssl resource
+export CPPFLAGS=-I/usr/local/opt/openssl/include
+export LDFLAGS=-L/usr/local/opt/openssl/lib
+
+# lua
+export LUA=/usr/local/opt/lua
+export LUAINC=/usr/local/opt/lua
+export LUALIB=/usr/local/opt/lua
+export LUABIN=/usr/local/bin
+
+[[ -s "/Users/vici/.gvm/scripts/gvm" ]] && source "/Users/vici/.gvm/scripts/gvm"
