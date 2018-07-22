@@ -22,6 +22,12 @@
 	<string>Mac Developer: vici.heyuhua@gmail.com (2G4H5T5RLU)</string>
 	<key>SDCodesignOnlyOnExport</key>
 	<false/>
+	<key>SDExpressions</key>
+	<array>
+		<string>themenu</string>
+		<string>value of themenu</string>
+		<string>static text "Rotation:" of theGroup</string>
+	</array>
 	<key>SDFolds</key>
 	<string>YnBsaXN0MDDUAQIDBAUGFBVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0
 b3ASAAGGoKMHCA1VJG51bGzSCQoLDFpOUy5vYmplY3RzViRjbGFzc6CAAtIODxAR
@@ -75,11 +81,11 @@ WVtga3SDh4+Yqq2yAAAAAAAAAQEAAAAAAAAAGAAAAAAAAAAAAAAAAAAAALQ=</string>
 							</array>
 							<key>5</key>
 							<array>
-								<integer>264</integer>
-								<integer>77</integer>
-								<integer>404</integer>
-								<integer>69</integer>
-								<integer>103</integer>
+								<integer>214</integer>
+								<integer>63</integer>
+								<integer>328</integer>
+								<integer>56</integer>
+								<integer>83</integer>
 							</array>
 						</dict>
 					</dict>
@@ -212,7 +218,7 @@ WVtga3SDh4+Yqq2yAAAAAAAAAQEAAAAAAAAAGAAAAAAAAAAAAAAAAAAAALQ=</string>
 					</dict>
 				</dict>
 				<key>eventLogHeight</key>
-				<real>213.5</real>
+				<real>427</real>
 				<key>eventLogViewState</key>
 				<dict>
 					<key>format</key>
@@ -283,7 +289,7 @@ WVtga3SDh4+Yqq2yAAAAAAAAAQEAAAAAAAAAGAAAAAAAAAAAAAAAAAAAALQ=</string>
 					</dict>
 				</dict>
 				<key>mainSplitPosition</key>
-				<real>712</real>
+				<real>702</real>
 				<key>modeIdentifier</key>
 				<string>tab.debug</string>
 				<key>resourcesViewState</key>
@@ -315,9 +321,9 @@ WVtga3SDh4+Yqq2yAAAAAAAAAQEAAAAAAAAAGAAAAAAAAAAAAAAAAAAAALQ=</string>
 						<array>
 							<dict>
 								<key>length</key>
-								<integer>11</integer>
+								<integer>961</integer>
 								<key>location</key>
-								<integer>473</integer>
+								<integer>0</integer>
 							</dict>
 						</array>
 						<key>LNSTextViewShowInvisibles</key>
@@ -329,7 +335,7 @@ WVtga3SDh4+Yqq2yAAAAAAAAAQEAAAAAAAAAGAAAAAAAAAAAAAAAAAAAALQ=</string>
 						<key>LNSTextViewWrapLines</key>
 						<false/>
 						<key>LNSVisibleRect</key>
-						<string>{{0, 0}, {908, 710.5}}</string>
+						<string>{{0, 0}, {442, 323}}</string>
 						<key>ShowLineNumbers</key>
 						<false/>
 						<key>showCodeCoverage</key>
@@ -358,7 +364,7 @@ WVtga3SDh4+Yqq2yAAAAAAAAAQEAAAAAAAAAGAAAAAAAAAAAAAAAAAAAALQ=</string>
 				<key>windowControllerID</key>
 				<string>785E0107-90E3-46DE-9B3C-2D640ADC37D0-5330-000173CDCFEECFC2</string>
 				<key>windowFrame</key>
-				<string>1629 1013 912 840 1200 870 1680 1050 </string>
+				<string>335 152 1204 840 0 0 1920 1200 </string>
 			</dict>
 		</dict>
 		<key>windowControllers</key>
@@ -373,7 +379,7 @@ WVtga3SDh4+Yqq2yAAAAAAAAAQEAAAAAAAAAGAAAAAAAAAAAAAAAAAAAALQ=</string>
 					<key>miniaturized</key>
 					<false/>
 					<key>windowFrame</key>
-					<string>1629 1013 912 840 1200 870 1680 1050 </string>
+					<string>335 152 1204 840 0 0 1920 1200 </string>
 				</dict>
 			</dict>
 		</array>

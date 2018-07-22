@@ -14,6 +14,7 @@
 \cf2 --	Copyright \'a9 2018 v1c77, All Rights Reserved\cf3 \
 \cf2 --\cf3 \
 \
+\pard\pardeftab480\slleading40\pardirnatural\partightenfactor0
 
 \b \cf3 use
 \b0 \cf3  \cf4 AppleScript\cf3  \cf5 version\cf3  \cf3 "2.7"\cf3  \cf2 -- Yosemite (10.10) or later\cf3 \
@@ -48,7 +49,9 @@
 \b0 \cf3  
 \i \cf5 pane
 \i0 \cf3  \cf3 "com.apple.preference.displays"\cf3 \
-	\cf2 --reveal pane id "com.apple.preference.displays"\cf3 \
+\pard\pardeftab480\slleading40\pardirnatural\partightenfactor0
+\cf3 	\cf2 --reveal pane id "com.apple.preference.displays"\cf3 \
+\pard\pardeftab480\slleading40\pardirnatural\partightenfactor0
 
 \b \cf3 end
 \b0 \cf3  
@@ -72,7 +75,7 @@
 \i0 \cf3  \cf3 "DELL U2415"\cf3  \cf2 -- change the window name for different display\cf3 \
 			
 \b \cf5 delay
-\b0 \cf3  \cf3 0.5\cf3 \
+\b0 \cf3  \cf3 1\cf3 \
 			
 \b \cf5 click
 \b0 \cf3  
@@ -97,6 +100,15 @@
 \b \cf3 of
 \b0 \cf3  \cf6 theGroup\cf3 \
 				
+\b \cf3 set
+\b0 \cf3  \cf6 theStat\cf3  
+\b \cf3 to
+\b0 \cf3  \cf4 value\cf3  
+\b \cf3 of
+\b0 \cf3  
+\b \cf3 it
+\b0 \cf3 \
+				
 \b \cf5 click
 \b0 \cf3 \
 				
@@ -105,10 +117,31 @@
 \i \cf5 menu
 \i0 \cf3  \cf3 1\cf3 \
 					
+\b \cf3 if
+\b0 \cf3  \cf6 theStat\cf3  = \cf3 "Standard"\cf3  
+\b \cf3 then
+\b0 \cf3 \
+						
 \b \cf5 click
 \b0 \cf3  
 \i \cf5 menu item
-\i0 \cf3  \cf3 4\cf3  \cf2 -- 1: standard 2: 90d 3: 180d 4 270d \cf3 \
+\i0 \cf3  \cf3 4\cf3  \cf2 -- 270 dig\cf3 \
+\pard\pardeftab480\slleading40\pardirnatural\partightenfactor0
+\cf3 					
+\b \cf3 else
+\b0 \cf3 \
+\pard\pardeftab480\slleading40\pardirnatural\partightenfactor0
+\cf3 						
+\b \cf5 click
+\b0 \cf3  
+\i \cf5 menu item
+\i0 \cf3  \cf3 1\cf3  \cf2 -- standard\cf3 \
+\pard\pardeftab480\slleading40\pardirnatural\partightenfactor0
+\cf3 					
+\b \cf3 end
+\b0 \cf3  
+\b \cf3 if
+\b0 \cf3 \
 				
 \b \cf3 end
 \b0 \cf3  
@@ -129,6 +162,7 @@
 \b0 \cf3  
 \b \cf3 tell
 \b0 \cf3 \
+\pard\pardeftab480\slleading40\pardirnatural\partightenfactor0
 
 \b \cf3 end
 \b0 \cf3  

@@ -1,6 +1,6 @@
 ## rotate screen display 
 
-
+让外置显示器在 横屏和竖屏间切换
 
 rotate_display.scpt
 
@@ -30,13 +30,18 @@ end tell
 tell application "System Events"
 	tell application process "System Preferences"
 		tell window "DELL U2415" -- change the window name for different display
-			delay 0.5
+			delay 1
 			click radio button "Display" of tab group 1
 			set theGroup to tab group 1
 			tell pop up button "Rotation:" of theGroup
+				set theStat to value of it
 				click
 				tell menu 1
-					click menu item 4 -- 1: standard 2: 90d 3: 180d 4 270d 
+					if theStat = "Standard" then
+						click menu item 4 -- 270 dig
+					else
+						click menu item 1 -- standard
+					end if
 				end tell
 			end tell
 		end tell

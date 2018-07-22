@@ -6,11 +6,11 @@
 	<dict>
 		<key>Resources/Scripts/main.recover.rtf</key>
 		<data>
-		NXwgOENHkK27w6lkB6GM9VJooDM=
+		ymeyYd/5aBnZZovQ3QAHbSKe434=
 		</data>
 		<key>Resources/Scripts/main.scpt</key>
 		<data>
-		DUcjkDb+/MvAb15aHUABT82Hfpc=
+		ZlxSMWXz58LyPElXC/5+pKDbShM=
 		</data>
 		<key>Resources/description.rtfd/TXT.rtf</key>
 		<data>
@@ -23,22 +23,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NXwgOENHkK27w6lkB6GM9VJooDM=
+			ymeyYd/5aBnZZovQ3QAHbSKe434=
 			</data>
 			<key>hash2</key>
 			<data>
-			aWZyKB2sUjVp5PEg7Lx0X7zzcidS5YLB1ZBctnNRxEA=
+			QrbSpNZ1Z1RVfxknlBJYFmrKqNEIVEw5CwiHDmxoOmw=
 			</data>
 		</dict>
 		<key>Resources/Scripts/main.scpt</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DUcjkDb+/MvAb15aHUABT82Hfpc=
+			ZlxSMWXz58LyPElXC/5+pKDbShM=
 			</data>
 			<key>hash2</key>
 			<data>
-			OYjXUUBlEnAX8r5AJeA3UaBk7Dv76Ah78Eb4B1uhqPE=
+			9oWusAICkDlGta5GiS3TVHsE4UF1UzGrQOt5qvidMFk=
 			</data>
 		</dict>
 		<key>Resources/description.rtfd/TXT.rtf</key>
@@ -56,7 +56,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			o9xQGZFs/3IUsGxTVXDCZ59RnBk=
+			kLKVm/NG5KiWK9TtK9NQXp8UBv8=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.heyuhua.rotate-screen" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: vici.heyuhua@gmail.com (2G4H5T5RLU)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
