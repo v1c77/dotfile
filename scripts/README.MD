@@ -30,7 +30,7 @@ end tell
 tell application "System Events"
 	tell application process "System Preferences"
 		tell window "DELL U2415" -- change the window name for different display
-			delay 1
+			delay 0.5
 			click radio button "Display" of tab group 1
 			set theGroup to tab group 1
 			tell pop up button "Rotation:" of theGroup
@@ -61,3 +61,6 @@ end tell
 
 https://apple.stackexchange.com/questions/175215/how-do-i-assign-a-keyboard-shortcut-to-an-applescript-i-wrote
 
+
+
+bind to ⌘ Fn13(print screenshot) is a good idea.
