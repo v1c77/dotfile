@@ -2,11 +2,15 @@ export ZSH=/Users/vici/.oh-my-zsh
 
 ZSH_THEME="gnzh"
 
+# for hub and brew installed tools auto Completions.
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 #zsh self conf
 autoload -U compinit
 compinit
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-plugins=(git docker docker-compose celery pyenv pip mvn zsh-syntax-highlighting nvm gvm)
+plugins=(git github docker docker-compose celery pyenv pip mvn zsh-syntax-highlighting nvm  zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,12 +33,11 @@ alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 alias -s tar='tar -zxvf'
-alias ins='sudo apt -y install'
-alias wp='cd ~/myproject/smartx'
-alias subl='open -a "Sublime Text"'
+alias wp='cd ~/proj/smartx'
 alias pc='proxychains4'
 alias git='hub'
 
+# nvm related
 export NVM_DIR="/Users/vici/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -47,41 +50,29 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="/usr/local/sbin:$PATH"
 
 # SOMETHING ABOUT GOLANG
-export GOPATH="/Users/vici/myproject/golang"
-export PATH="$PATH:/usr/local/go/bin"
-export PATH="$PATH:/Users/vici/myproject/golang/bin"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
-export PATH="/Users/vici/myproject/qshell-v2.0.3:/$PATH"
+# export PATH="/Users/vici/myproject/qshell-v2.0.3:/$PATH"
 
-# mysql source
-export PATH=/usr/local/mysql/bin:$PATH
-export PATH=/usr/local/mysql/support-files:$PATH
-alias mysql=/usr/local/mysql/bin/mysql
-alias mysqladmin=/usr/local/mysql/bin/mysqladmin
+# setup cmd  proxy
+function init_proxy {
+    eval "export https_proxy=http://127.0.0.1:1090;export http_proxy=http://127.0.0.1:1090;export all_proxy=socks5://127.0.0.1:1080"
+}
 
-# add pyenv-virtualenv config
-if which pyenv-virtualenv-init > /dev/null; then 
-  eval "$(pyenv virtualenv-init -)"; 
-fi
-
-
-# mysql source
-export PGDATA="/Users/vici/Library/Application Support/Postgres/var-9.6"
 
 # added by travis gem
-[ -f /Users/vici/.travis/travis.sh ] && source /Users/vici/.travis/travis.sh
+#[ -f /Users/vici/.travis/travis.sh ] && source /Users/vici/.travis/travis.sh
 
 # dotfile script
-function dot_sync {
-  eval "cd ~/myproject/dotfiles && make sync"
-}
-
-function dot_upload {
-  eval "cd ~/myproject/dotfiles && make upload"
-}
+# function dot_sync {
+#   eval "cd ~/myproject/dotfiles && make sync"
+# }
+#
+# function dot_upload {
+#   eval "cd ~/myproject/dotfiles && make upload"
+# }
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
@@ -101,4 +92,10 @@ export LUAINC=/usr/local/opt/lua
 export LUALIB=/usr/local/opt/lua
 export LUABIN=/usr/local/bin
 
+# pyenv related
+export PATH="/Users/vici/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 [[ -s "/Users/vici/.gvm/scripts/gvm" ]] && source "/Users/vici/.gvm/scripts/gvm"
+
