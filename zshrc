@@ -60,6 +60,9 @@ export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 function init_proxy {
     eval "export https_proxy=http://127.0.0.1:1090;export http_proxy=http://127.0.0.1:1090;export all_proxy=socks5://127.0.0.1:1080"
 }
+function remove_proxy {
+    eval "export https_proxy=;export http_proxy=;export all_proxy="
+}
 
 
 # added by travis gem
@@ -98,4 +101,16 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 [[ -s "/Users/vici/.gvm/scripts/gvm" ]] && source "/Users/vici/.gvm/scripts/gvm"
+
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+# qt related
+# For compilers to find qt you may need to set:
+#  export LDFLAGS="-L/usr/local/opt/qt/lib"
+#  export CPPFLAGS="-I/usr/local/opt/qt/include"
+
+# For pkg-config to find qt you may need to set:
+#   export PKG_CONFIG_PATH="/usr/local/opt/qt/lib/pkgconfig"
+export PATH="/usr/local/opt/qt/bin:$PATH"
 
