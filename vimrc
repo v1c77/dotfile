@@ -47,7 +47,6 @@ Plug 'bronson/vim-trailing-whitespace' " 快速去行尾空格 [, + <Space>]
 Plug 'unblevable/quick-scope'   " 更高效的行内移动, f/F/t/T, 才触发
 Plug 'scrooloose/nerdtree'      " 目录树
 
-
 call plug#end()
 
 " ==================== Foundation Config =======================

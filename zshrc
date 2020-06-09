@@ -36,6 +36,7 @@ alias -s tar='tar -zxvf'
 alias wp='cd ~/proj/smartx'
 alias pc='proxychains4'
 alias git='hub'
+alias vinavel='vim +"set nornu nonumber wrap"'
 
 # nvm related
 export NVM_DIR="/Users/vici/.nvm"
@@ -48,6 +49,9 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="/usr/local/sbin:$PATH"
+
+#some tools about GNU
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # SOMETHING ABOUT GOLANG
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -85,9 +89,6 @@ export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL=
 
-# openssl resource
-export CPPFLAGS=-I/usr/local/opt/openssl/include
-export LDFLAGS=-L/usr/local/opt/openssl/lib
 
 # lua
 export LUA=/usr/local/opt/lua
@@ -107,10 +108,20 @@ export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 
 # qt related
 # For compilers to find qt you may need to set:
-#  export LDFLAGS="-L/usr/local/opt/qt/lib"
-#  export CPPFLAGS="-I/usr/local/opt/qt/include"
+export LDFLAGS="-L/usr/local/opt/qt/lib"
+export CPPFLAGS="-I/usr/local/opt/qt/include"
 
 # For pkg-config to find qt you may need to set:
-#   export PKG_CONFIG_PATH="/usr/local/opt/qt/lib/pkgconfig"
+export PKG_CONFIG_PATH="/usr/local/opt/qt/lib/pkgconfig"
 export PATH="/usr/local/opt/qt/bin:$PATH"
 
+# openssl related
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+
+#libvirt
+export PKG_CONFIG_PATH="/usr/local/opt/libvirt/lib/pkgconfig"
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/kustomize kustomize
