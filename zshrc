@@ -10,10 +10,14 @@ fi
 #zsh self conf
 autoload -U compinit
 compinit
-plugins=(git github docker docker-compose celery pyenv pip mvn zsh-syntax-highlighting nvm  zsh-autosuggestions)
+plugins=(git github docker docker-compose celery pyenv pip mvn zsh-syntax-highlighting nvm zsh-autosuggestions iterm2 rsync)
 
 source $ZSH/oh-my-zsh.sh
 
+#============== key binging ================
+bindkey "^R" history-incremental-search-backward
+
+#=============== alias =====================
 alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 alias cls='clear'
@@ -125,3 +129,12 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 export PKG_CONFIG_PATH="/usr/local/opt/libvirt/lib/pkgconfig"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/kustomize kustomize
+
+#rust
+source $HOME/.cargo/env
+
+#tk
+export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
